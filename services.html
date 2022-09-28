@@ -14,13 +14,16 @@
 <body>
     <nav>
         <img src="ab.jpg" class="logo">
-        <ul>
+        <ul id="sidemenu">
             <li><a href="index.html">HOME</a></li>
             <li><a href="about.html">ABOUT</a></li>
             <li><a href="services.html">SERVICES</a></li>
             <li><a href="portfolio.html">PORTFOLIO</a></li>
-            <li><a href="index.html">CONTACT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <i class="fa-sharp fa-solid fa-xmark" onclick="hideMenu()"></i>
         </ul>
+
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
     </nav>
 
     <!----------------services-------->
@@ -54,6 +57,20 @@
         </div>
 
     </div>
+    <!------javascript for toggel --------->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            sidemenu.style.right = "0";
+
+        }
+        function hideMenu() {
+            sidemenu.style.right = "-200px";
+
+        }
+    </script>
+
 </body>
 
 </html>
