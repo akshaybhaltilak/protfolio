@@ -13,7 +13,7 @@ body {
 #header {
   width: 100%;
   height: 100vh;
-  background-image: url(a1.jpg);
+  background-image: url(pexels-junior-teixeira-2047905.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -78,7 +78,77 @@ nav ul li a:hover:after{
 
 
 
+/*about-----------*/
 
+.box{
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.box::after
+{
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-image: conic-gradient(transparent,
+  transparent,transparent, #d400d4);
+  animation: animate 4s linear infinite;
+ animation-delay: -2s ;
+}
+.box::before
+{
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-image: conic-gradient(transparent,
+  transparent,transparent, #00ccff);
+  animation: animate 4s linear infinite;
+}
+@keyframes animate{
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+
+
+}
+.box span{
+  position:absolute;
+  inset: 5px;
+  border-radius: 16px;
+  background: #0c1022;
+  z-index: 1;
+
+}
+.box h2{
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  border-radius: 15px;
+  font-size: 3em;
+  margin-bottom: 300px;
+  margin-left: 12px;
+}
+
+.box img{
+  position: absolute;
+  inset: 5;
+  z-index: 1;
+  border-radius: 14px;
+  color: #fff;
+  height: 95%;
+  width: 95%;
+}
 
 
 
@@ -380,14 +450,19 @@ nav .fa-solid{
 
 @media only screen and (max-width: 600px){
   #header{
-    background-image: url(media.jpg);
+    background-image: url(pexels-junior-teixeira-2047905.jpg);
   }
   .header-text{
     margin-top: 100%;
     font-size: 16px;
   }
   .header-text h1{
-    font-size: 30px;
+    font-size: 40px;
+    margin-top: 100px;
+  }
+  .header-text p{
+    font-size: 40px;
+    margin-top: 100px;
   }
   nav .fa-solid{
     display: block;
