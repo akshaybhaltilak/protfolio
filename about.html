@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,26 +8,36 @@
     <title>Akshay</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <nav>
         <img src="ab.jpg" class="logo">
-        <ul>
+        <ul id="sidemenu">
             <li><a href="index.html">HOME</a></li>
             <li><a href="about.html">ABOUT</a></li>
             <li><a href="services.html">SERVICES</a></li>
             <li><a href="portfolio.html">PORTFOLIO</a></li>
-            <li><a href="index.html">CONTACT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <i class="fa-sharp fa-solid fa-xmark" onclick="hideMenu()"></i>
         </ul>
-   </nav>
+
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
     <!-------------ABout---------->
 
-    
+
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="about-col-1">
+
+                <div class="box">
+                    <span></span>
+                    <h2>AKSHAY</h2>
                     <img src="abs.jpg" alt="">
+
+
+
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -47,24 +58,24 @@
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>HTML,CSS,JAVASRCIPT</span><br>Designing Web/App interfaces</li>
                             <li><span>Web Developement</span><br>Designing Web interfaces</li>
-                            <li><span>App Developement</span><br>Designing App interfaces</li>
+                            <li><span>PYTHON</span><br>Designing App interfaces</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experince">
                         <ul>
-                            <li><span>2021 - Current</span><br>UI/UX Design Training at ET Institute</li>
-                            <li><span>2019 - 2021</span><br>Team leas at StarApp LLC.</li>
-                            <li><span>2017 - 2019</span><br>UI/UX Design Excutive at coin Digital LTD.</li>
-                            <li><span>2016 - 2017</span><br>Interanship at skart eCommerce</li>
+                            <li><span>FRONT END</span><br>MASTER IN HTML, CSS, JAVASCRIPT</li>
+                            <li><span>C LANGUAGE</span><br>PROGRAMMER IN C LANGUAGE.</li>
+                            <li><span>WORDPRESS</span><br>EXPERIENCE IN WORDPRESS</li>
+                            <li><span>BOOTSTRAPE</span><br>BOOTSTRAPE Intermediate DEVELOPER</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>2016</span><br>UI/UX Design Training at ET Institute</li>
-                            <li><span>2016</span><br>MBA form MIT Bangalore</li>
-                            <li><span>1014</span><br>BBA form ISM Bangalore</li>
+                            <li><span>2019</span><br>Complete 10th</li>
+                            <li><span>2020</span><br>Complete !2th </li>
+                            <li><span>2021</span><br>Get Addmission in BSC CS</li>
                         </ul>
                     </div>
                 </div>
@@ -72,6 +83,7 @@
         </div>
 
     </div>
+   
 
     <script>
 
@@ -89,8 +101,20 @@
             }
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
+
+            var navLinks = document.getElementById("navLinks");
+            function showMenu() {
+                sidemenu.style.right = "0";
+
+            }
+            function hideMenu() {
+                sidemenu.style.right = "-200px";
+
+            }
         }
 
     </script>
+
 </body>
+
 </html>
